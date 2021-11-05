@@ -19,7 +19,7 @@
 >2. more difficult as much as project complicates
 > 
 ### 2. jpa(Java Persistence API)
-> ####meaning
+> #### meaning
 > &nbsp; provides java developers with an orm facility fro managing data in Java applications  
 > 
 ### 3. Srping Data JPA
