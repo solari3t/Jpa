@@ -105,7 +105,7 @@
 3. SEQUENCE
 4. TABLE
 
-####Auto Generation
+#### Auto Generation
 
 the persistence provider will determine values basesd on **type** of the primary key attribute. could be numeric or UUID.
 
