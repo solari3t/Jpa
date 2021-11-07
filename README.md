@@ -220,9 +220,9 @@ public class Book {
 &nbsp; so sequence , identity generation would be better choice.
 
 
-### Day 3
+## Day 3
 
-#### 1. underscore(_) in JPA Entity Column Name
+### 1. underscore(_) in JPA Entity Column Name
 
 &nbsp; in Spring Data Jpa , **underscore( _ )** is reserved character for manually define property path description,
 
@@ -261,4 +261,12 @@ if run Test, would failed as below
     Error creating bean with name 'bookRepository' defined in com.orm.jjpa.repository.BookRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.orm.jjpa.repository.BookRepository.getByAuthor_name(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.orm.jjpa.repository.BookRepository.getByAuthor_name(java.lang.String)! No property author found for type Book!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.orm.jjpa.repository.BookRepository.getByAuthor_name(java.lang.String)! No property author found for type Book!
 
 in conclusion , when declare column name , Spring data jpa highly recommends to use CamelCase, or may cause Error.
+
+
+### 2. getBy , findBy
+
+    
+&nbsp;  if use **getBy**  when entity not exists, would throw exception , should catch it to avoid error
+
+&nbsp;  use **findBy* , would either return entity object or *null* . should handle if(null) to catch when entity does not exists...
 
