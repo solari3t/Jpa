@@ -268,5 +268,5 @@ in conclusion , when declare column name , Spring data jpa highly recommends to 
     
 &nbsp;  if use **getBy**  when entity not exists, would throw exception , should catch it to avoid error
 
-&nbsp;  use **findBy* , would either return entity object or *null* . should handle if(null) to catch when entity does not exists...
+&nbsp;  use **findBy** , would either return entity object or *null* . should handle if(null) to catch when entity does not exists...
 
